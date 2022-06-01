@@ -31,9 +31,9 @@ void Ship::send(int destination, int tag)
 {
     packet_t* pkt = (packet_t*)malloc(sizeof(packet_t));
     pkt->src = rank;
-    pthread_mutex_lock(&stateMut);
+    stateMut.lock();
     pkt->ts = lamport_clock+1;
-    pthread_mutex_unlock(&stateMut);
+    stateMut.unlock();
     MPI_Send( pkt, 1, MPI_PAKIET_T, destination, tag, MPI_COMM_WORLD);
     free(pkt);
 }
@@ -43,6 +43,14 @@ void Ship::broadcast(int ts, int src, int tag) {}
 void Ship::addReceivedOk() {
     received_oks += 1;
     return;
+}
+
+void Ship::requestDockFromAll() {
+    for (int i=0; i<all_ships_num; i++) {
+        if (i!=rank){
+            send(i, REQUEST);
+        }
+    }
 }
 
 int Ship::getRank() {

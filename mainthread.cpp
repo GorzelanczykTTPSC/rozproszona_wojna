@@ -13,10 +13,15 @@ void mainLoop(Ship& ship)
 
         ship.setState(RequestingDock);
 
-        //ship.requestDockFromAll();
+        ship.requestDockFromAll();
 
-        ship.canEnterDock
+        std::unique_lock<std::mutex> lk(ship.stateMut);
+        ship.canEnterDock.wait(lk);
 
+        ship.setState(InDock);
+        sleep((unsigned int)random()%10000);
+
+/*
         state_t stanObecny = ship.getState();
 
         switch (stanObecny) {
@@ -25,7 +30,6 @@ void mainLoop(Ship& ship)
                 break;
         }
 
-/*
         if (perc<STATE_CHANGE_PROB) {
             if (stan==InRun) {
 		        //debug("Zmieniam stan na wysyłanie");

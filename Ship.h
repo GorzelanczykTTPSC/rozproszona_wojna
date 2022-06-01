@@ -4,6 +4,7 @@
 #include <mpi.h>
 #include <vector>
 #include "utils.h"
+#include <mutex>
 #include <thread>
 #include <condition_variable>
 
@@ -26,7 +27,6 @@ class Ship {
     public:
 
         Ship();
-        //pthread_mutex_t stateMut = PTHREAD_MUTEX_INITIALIZER;
         std::mutex stateMut;
         std::condition_variable canEnterDock;
 
@@ -34,6 +34,7 @@ class Ship {
         void broadcast(int ts, int src, int tag); 
         void setClock(int newValue);
         void addReceivedOk();
+        void requestDockFromAll();
 
         int getClock();
         int getRank();
