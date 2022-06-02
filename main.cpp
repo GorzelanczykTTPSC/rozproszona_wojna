@@ -11,9 +11,6 @@
 //#include <fcntl.h>
 
 volatile char end = false;
-pthread_t threadKom;
-
-pthread_mutex_t moneyMut = PTHREAD_MUTEX_INITIALIZER;
 
 MPI_Datatype MPI_PAKIET_T;
 
@@ -58,8 +55,8 @@ void init(int *argc, char ***argv)
     /* sklejone z stackoverflow */
     
     const int nitems=FIELDNO; 
-    int       blocklengths[FIELDNO] = {1,1,1};
-    MPI_Datatype typy[FIELDNO] = {MPI_INT, MPI_INT, MPI_INT};
+    int       blocklengths[FIELDNO] = {1,1};
+    MPI_Datatype typy[FIELDNO] = {MPI_INT, MPI_INT};
 
     MPI_Aint     offsets[FIELDNO]; 
     offsets[0] = offsetof(packet_t, ts);
@@ -82,7 +79,6 @@ void finalize()
     //pthread_mutex_destroy( &stateMut);
     /* Czekamy, aż wątek potomny się zakończy */
     //println("czekam na wątek \"komunikacyjny\"\n" );
-    pthread_join(threadKom,NULL);
     MPI_Type_free(&MPI_PAKIET_T);
     MPI_Finalize();
 }

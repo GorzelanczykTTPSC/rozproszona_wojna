@@ -2,7 +2,9 @@
 #define SHIP_H
 
 #include <mpi.h>
+#include <string>
 #include <vector>
+#include <algorithm>
 #include "utils.h"
 #include <mutex>
 #include <thread>
@@ -15,8 +17,8 @@ class Ship {
         int rank;
         int all_ships_num;
 
-        int lamport_clock;
-        int last_sent_request_msg_timestamp = -1;
+        int lamport_clock = 0;
+        int last_sent_request_msg_timestamp = 999991;
         std::vector<int> to_send_back_OK;
 
         int received_oks = 0;
@@ -27,14 +29,16 @@ class Ship {
     public:
 
         Ship();
-        std::mutex stateMut;
-        std::condition_variable canEnterDock;
+        std::mutex* stateMut;
+        std::condition_variable* canEnterDock;
 
         void send(int destination, int tag);
         void broadcast(int ts, int src, int tag); 
         void setClock(int newValue);
         void addReceivedOk();
         void requestDockFromAll();
+        void sendWaitingOKs();
+        void print(std::string text);
 
         int getClock();
         int getRank();
@@ -42,6 +46,7 @@ class Ship {
         int getLastRequestTimestamp();
         state_t getState();
         void setState(state_t state);
+        void remember(int shipID);
 
 };
 

@@ -29,11 +29,6 @@
 
 #define ROOT 0
 
-#define DOCKS 4
-
-
-
-extern pthread_mutex_t stateMut;
 
 /* macro debug - działa jak printf, kiedy zdefiniowano
    DEBUG, kiedy DEBUG niezdefiniowane działa jak instrukcja pusta 

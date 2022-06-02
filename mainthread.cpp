@@ -4,22 +4,37 @@ int STATE_CHANGE_PROB = 50;
 
 void mainLoop(Ship& ship)
 {
-    srandom(ship.getRank());
+    srandom(time(NULL)+getpid()+ship.getRank());
+    ship.print("My pid: "+std::to_string(getpid()));
     while (true) { //(ship.getState() != InFinish) {
         int perc = random()%100; 
 
+        unsigned int seconds = ship.getRank()==1 ? 1000 : (unsigned int)rand()%10;
+        ship.print("Going into fight for "+std::to_string(seconds)+ " seconds!");
+        ship.stateMut->lock();
         ship.setState(Fighting);
-        sleep((unsigned int)random()%10000);
+        ship.stateMut->unlock();
+        sleep(seconds);
 
+        ship.print("Fight done. Now I want to get a dock!");
+        ship.stateMut->lock();
         ship.setState(RequestingDock);
+        ship.stateMut->unlock();
 
         ship.requestDockFromAll();
 
-        std::unique_lock<std::mutex> lk(ship.stateMut);
-        ship.canEnterDock.wait(lk);
+        std::unique_lock<std::mutex> lk(*ship.stateMut);
+        ship.canEnterDock->wait(lk);
 
+        unsigned int secondsForDock = ship.getRank()==1 ? 1000 : (unsigned int)rand()%10;
+        ship.print("Entering the dock for "+std::to_string(secondsForDock)+" seconds!");
         ship.setState(InDock);
-        sleep((unsigned int)random()%10000);
+        ship.print("I'm in the dock.");
+        ship.canEnterDock->notify_all();
+        sleep(secondsForDock);
+
+        ship.print("Leaving the dock.");
+        ship.sendWaitingOKs();
 
 /*
         state_t stanObecny = ship.getState();
@@ -45,6 +60,5 @@ void mainLoop(Ship& ship)
             } 
         }
         */
-        sleep(random()%1000);
     }
 }

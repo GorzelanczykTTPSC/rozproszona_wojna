@@ -5,7 +5,7 @@
 /* stany procesu */
 typedef enum {InDock, Fighting, RequestingDock, ReadyToComeIn } state_t;
 
-#define FIELDNO 3
+#define FIELDNO 2
 typedef struct {
     int ts;         /* timestamp (zegar lamporta */
     int src;        /* od kogo pochodzi wiadomość (rank) */
@@ -19,6 +19,8 @@ typedef struct {
 #define OK 4
 #define GIVEMESTATE 5
 #define STATE 6
+
+#define DOCKS 1
 
 extern MPI_Datatype MPI_PAKIET_T;
 
