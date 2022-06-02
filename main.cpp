@@ -4,6 +4,8 @@
 //#include "monitor.h"
 /* wątki */
 #include <thread>
+#include <csignal>
+#include <functional>
 
 /* sem_init sem_destroy sem_post sem_wait */
 //#include <semaphore.h>
@@ -74,7 +76,7 @@ void init(int *argc, char ***argv)
 /* usunięcie zamkków, czeka, aż zakończy się drugi wątek, zwalnia przydzielony typ MPI_PAKIET_T
    wywoływane w funkcji main przed końcem
 */
-void finalize()
+void finalize(int signal_num)
 {
     //pthread_mutex_destroy( &stateMut);
     /* Czekamy, aż wątek potomny się zakończy */
@@ -83,17 +85,30 @@ void finalize()
     MPI_Finalize();
 }
 
+namespace {
+std::function<void(int)> shutdown_handler;
+void signal_handler(int signal) { shutdown_handler(signal); }
+}
+
 int main(int argc, char **argv)
 {
+    signal(SIGKILL, finalize);
+    signal(SIGABRT, finalize);
     /* Tworzenie wątków, inicjalizacja itp */
     init(&argc,&argv); // tworzy wątek komunikacyjny w "watek_komunikacyjny.c"
 
     Ship ship = Ship();
     std::thread commThread(communicationThread, std::ref(ship));
 
+    shutdown_handler = [&](int signal) {
+        ship.finish();
+        MPI_Type_free(&MPI_PAKIET_T);
+        MPI_Finalize();
+    };
+
     mainLoop(std::ref(ship));          // w pliku "watek_glowny.c"
 
-    finalize();
+    //finalize();
     return 0;
 }
 

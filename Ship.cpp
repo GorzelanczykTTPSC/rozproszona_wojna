@@ -21,6 +21,14 @@ int Ship::getClock() {
     return lamport_clock;
 }
 
+void Ship::debug(bool val) {
+    isdebug = val;
+}
+
+bool Ship::debug() {
+    return isdebug;
+}
+
 /*
  *
  * destination - rank okrętu docelowego
@@ -31,19 +39,14 @@ void Ship::send(int destination, int tag)
 {
     packet_t* pkt = (packet_t*)malloc(sizeof(packet_t));
     pkt->src = rank;
-    //stateMut->lock();
-    //lamport_clock+= 1;
     pkt->ts = lamport_clock+1;
     if (tag == REQUEST) {
         last_sent_request_msg_timestamp=lamport_clock;
     }
-    //stateMut->unlock();
-    print("Sending message "+std::to_string(tag)+" to #"+std::to_string(destination));
+    //print("Sending message "+std::to_string(tag)+" to #"+std::to_string(destination));
     MPI_Send( pkt, 1, MPI_PAKIET_T, destination, tag, MPI_COMM_WORLD);
     free(pkt);
 }
-
-void Ship::broadcast(int ts, int src, int tag) {}
 
 void Ship::addReceivedOk() {
     received_oks += 1;
@@ -59,7 +62,6 @@ void Ship::addReceivedOk() {
 void Ship::requestDockFromAll() {
     for (int i=0; i<all_ships_num; i++) {
         if (i!=rank){
-            //print("Sending REQUEST message.");
             send(i, REQUEST);
         }
     }
@@ -67,7 +69,8 @@ void Ship::requestDockFromAll() {
 
 void Ship::print(std::string text) {
     std::cout << "\033["+std::to_string(30+(rank%7)+1)+"m" 
-        + "[id: " + std::to_string(rank) + "] [clock: " + std::to_string(lamport_clock)+"]" 
+        + "[id: " + std::to_string(rank) 
+        + "] [clock: " + std::to_string(lamport_clock)+"]" 
         + text + "\033[0m\n";
 }
 
@@ -85,6 +88,14 @@ state_t Ship::getState() {
 
 void Ship::setState(state_t stat) {
     state = stat;
+}
+
+void Ship::finish() {
+    isactive = false;
+}
+
+bool Ship::isActive() {
+    return isactive;
 }
 
 int Ship::getLastRequestTimestamp() {

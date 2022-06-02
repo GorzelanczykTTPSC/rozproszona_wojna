@@ -6,10 +6,10 @@ void mainLoop(Ship& ship)
 {
     srandom(time(NULL)+getpid()+ship.getRank());
     ship.print("My pid: "+std::to_string(getpid()));
-    while (true) { //(ship.getState() != InFinish) {
+    while (ship.isActive()) { //(ship.getState() != InFinish) {
         int perc = random()%100; 
 
-        unsigned int seconds = ship.getRank()==1 ? 1000 : (unsigned int)rand()%10;
+        unsigned int seconds = (unsigned int)rand()%10+1;
         ship.print("Going into fight for "+std::to_string(seconds)+ " seconds!");
         ship.stateMut->lock();
         ship.setState(Fighting);
@@ -26,10 +26,10 @@ void mainLoop(Ship& ship)
         std::unique_lock<std::mutex> lk(*ship.stateMut);
         ship.canEnterDock->wait(lk);
 
-        unsigned int secondsForDock = ship.getRank()==1 ? 1000 : (unsigned int)rand()%10;
+        unsigned int secondsForDock = (unsigned int)rand()%10+1;
         ship.print("Entering the dock for "+std::to_string(secondsForDock)+" seconds!");
         ship.setState(InDock);
-        ship.print("I'm in the dock.");
+        if (ship.debug()) ship.print("I'm in the dock.");
         ship.canEnterDock->notify_all();
         sleep(secondsForDock);
 

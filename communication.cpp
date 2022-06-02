@@ -9,7 +9,7 @@ void communicationThread(Ship& ship) {
     std::cout << "Rozpoczynam wątek komunikacyjny.\n";
 
     /* Obrazuje pętlę odbierającą pakiety o różnych typach */
-    while (true) {
+    while (ship.isActive()) {
 	    //debug("czekam na recv");
         MPI_Recv( &pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 
@@ -26,14 +26,13 @@ void communicationThread(Ship& ship) {
                         ship.print("OK, I agree");
                         ship.send(pakiet.src, OK);
                     } else if ( (stat == InDock) || ((stat == RequestingDock) && (ship.getLastRequestTimestamp() > pakiet.ts))) {
-                        ship.print("Nah, I can't let him");
+                        ship.print("Nah, I can't let him in");
                         ship.remember(pakiet.src);
                     }
                     ship.stateMut->unlock();
                 }
 	        break;
 	        case OK: 
-                // najpierw sprawdź czy jesteś w stanie oczekiwania na OKsy
                 //ship.print("I received OK from "+std::to_string(pakiet.src));
                 if (ship.getState()==RequestingDock) {
                     //ship.print(" and I am requesting a dock pkt_ts: "+std::to_string(pakiet.ts)+" last_req_ts: "+std::to_string(ship.getLastRequestTimestamp()));

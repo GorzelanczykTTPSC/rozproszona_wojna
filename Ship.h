@@ -25,6 +25,9 @@ class Ship {
 
         state_t state;
 
+        bool isdebug = false;
+        bool isactive = true;
+
 
     public:
 
@@ -33,7 +36,6 @@ class Ship {
         std::condition_variable* canEnterDock;
 
         void send(int destination, int tag);
-        void broadcast(int ts, int src, int tag); 
         void setClock(int newValue);
         void addReceivedOk();
         void requestDockFromAll();
@@ -47,6 +49,10 @@ class Ship {
         state_t getState();
         void setState(state_t state);
         void remember(int shipID);
+        void debug(bool val);
+        bool debug();
+        void finish();
+        bool isActive();
 
 };
 
