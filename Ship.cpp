@@ -50,9 +50,9 @@ void Ship::send(int destination, int tag)
 
 void Ship::addReceivedOk() {
     received_oks += 1;
-    print("Received oks: "+std::to_string(received_oks)+" All ships: "+std::to_string(all_ships_num));
-    if (received_oks>=(all_ships_num-DOCKS)) {
-        print("I got " + std::to_string(received_oks) + " oks. I'm coming in.");
+    if (debug()) print("Received oks: "+std::to_string(received_oks)+" All ships: "+std::to_string(all_ships_num));
+    if (received_oks>=(all_ships_num-DOCKS==1 ? all_ships_num-DOCKS : all_ships_num-DOCKS)) {
+        if (debug()) print("I got " + std::to_string(received_oks) + " oks. I'm coming in.");
         //stateMut->unlock();
         canEnterDock->notify_all();
     }
@@ -70,7 +70,7 @@ void Ship::requestDockFromAll() {
 void Ship::print(std::string text) {
     std::cout << "\033["+std::to_string(30+(rank%7)+1)+"m" 
         + "[id: " + std::to_string(rank) 
-        + "] [clock: " + std::to_string(lamport_clock)+"]" 
+        + "] [clock: " + std::to_string(lamport_clock)+"] \t" 
         + text + "\033[0m\n";
 }
 
@@ -110,37 +110,10 @@ void Ship::remember(int shipID) {
 }
 
 void Ship::sendWaitingOKs() {
-    for (int shipid : to_send_back_OK) {
-        send(shipid, OK);
-    }
+    //for (int shipid : to_send_back_OK) {
+    //    send(shipid, OK);
+    //}
+    if (to_send_back_OK.size()>0) send(to_send_back_OK.front(), OK);
     to_send_back_OK.clear();
     received_oks = 0;
-}
-
-void changeMoney( int newMoney )
-{
-    /*
-    pthread_mutex_lock( &moneyMut );
-    if (stan==InFinish) { 
-	pthread_mutex_unlock( &moneyMut );
-        return;
-    }
-    money += newMoney;
-    pthread_mutex_unlock( &moneyMut );
-    */
-   return;
-}
-
-void changeState( state_t newState )
-{
-    /*
-    pthread_mutex_lock( &stateMut );
-    if (stan==InFinish) { 
-	pthread_mutex_unlock( &stateMut );
-        return;
-    }
-    stan = newState;
-    pthread_mutex_unlock( &stateMut );
-    */
-    return;
 }

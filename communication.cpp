@@ -6,7 +6,7 @@ void communicationThread(Ship& ship) {
     int is_message = false;
     packet_t pakiet;
 
-    std::cout << "Rozpoczynam wątek komunikacyjny.\n";
+    if (ship.debug()) ship.print("Rozpoczynam wątek komunikacyjny.");
 
     /* Obrazuje pętlę odbierającą pakiety o różnych typach */
     while (ship.isActive()) {
@@ -19,14 +19,14 @@ void communicationThread(Ship& ship) {
         switch ( status.MPI_TAG ) {
 	        case REQUEST: 
                 {
-                    ship.print("Ship #"+std::to_string(pakiet.src)+" wants to get a dock!");
+                    if (ship.debug()) ship.print("Ship #"+std::to_string(pakiet.src)+" wants to get a dock!");
                     
                     state_t stat = ship.getState();
                     if ( (stat == Fighting) || ((stat == RequestingDock) && (ship.getLastRequestTimestamp()<pakiet.ts))) {
-                        ship.print("OK, I agree");
+                        if (ship.debug()) ship.print("OK, I agree");
                         ship.send(pakiet.src, OK);
                     } else if ( (stat == InDock) || ((stat == RequestingDock) && (ship.getLastRequestTimestamp() > pakiet.ts))) {
-                        ship.print("Nah, I can't let him in");
+                        if (ship.debug()) ship.print("Nah, I can't let him in");
                         ship.remember(pakiet.src);
                     }
                     ship.stateMut->unlock();

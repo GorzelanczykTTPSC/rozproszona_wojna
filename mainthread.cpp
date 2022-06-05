@@ -19,9 +19,9 @@ void mainLoop(Ship& ship)
         ship.print("Fight done. Now I want to get a dock!");
         ship.stateMut->lock();
         ship.setState(RequestingDock);
+        ship.requestDockFromAll();
         ship.stateMut->unlock();
 
-        ship.requestDockFromAll();
 
         std::unique_lock<std::mutex> lk(*ship.stateMut);
         ship.canEnterDock->wait(lk);
@@ -33,7 +33,7 @@ void mainLoop(Ship& ship)
         ship.canEnterDock->notify_all();
         sleep(secondsForDock);
 
-        ship.print("Leaving the dock.");
+        if (ship.debug()) ship.print("Leaving the dock.");
         ship.sendWaitingOKs();
 
 /*

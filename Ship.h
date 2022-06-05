@@ -25,7 +25,7 @@ class Ship {
 
         state_t state;
 
-        bool isdebug = false;
+        bool isdebug = SHIP_DEBUG;
         bool isactive = true;
 
 

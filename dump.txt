@@ -1,0 +1,40 @@
+0]0] 	My pid: 224880
+0]0] 	Going into fight for 2 seconds!
+2]0] 	My pid: 224882
+2]0] 	Going into fight for 7 seconds!
+3]0] 	My pid: 224883
+3]0] 	Going into fight for 5 seconds!
+5]0] 	My pid: 224885
+5]0] 	Going into fight for 4 seconds!
+4]0] 	My pid: 224884
+4]0] 	Going into fight for 4 seconds!
+1]0] 	My pid: 224881
+1]0] 	Going into fight for 4 seconds!
+0]0] 	Fight done. Now I want to get a dock!
+0]8] 	Entering the dock for 3 seconds!
+5]2] 	Fight done. Now I want to get a dock!
+4]4] 	Fight done. Now I want to get a dock!
+1]6] 	Fight done. Now I want to get a dock!
+3]8] 	Fight done. Now I want to get a dock!
+0]8] 	Going into fight for 10 seconds!
+4]15] 	Entering the dock for 2 seconds!
+3]24] 	Entering the dock for 2 seconds!
+1]19] 	Entering the dock for 8 seconds!
+5]13] 	Entering the dock for 5 seconds!
+2]10] 	Fight done. Now I want to get a dock!
+4]15] 	Going into fight for 2 seconds!
+3]24] 	Going into fight for 9 seconds!
+4]16] 	Fight done. Now I want to get a dock!
+5]13] 	Going into fight for 4 seconds!
+1]19] 	Going into fight for 7 seconds!
+4]33] 	Entering the dock for 7 seconds!
+5]18] 	Fight done. Now I want to get a dock!
+0]20] 	Fight done. Now I want to get a dock!
+3]28] 	Fight done. Now I want to get a dock!
+1]30] 	Fight done. Now I want to get a dock!
+4]33] 	Going into fight for 6 seconds!
+2]35] 	Entering the dock for 7 seconds!
+4]37] 	Fight done. Now I want to get a dock!
+2]35] 	Going into fight for 2 seconds!
+4]55] 	Entering the dock for 8 seconds!
+2]39] 	Fight done. Now I want to get a dock!

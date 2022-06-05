@@ -1,0 +1,25 @@
+[34m[id: 3] [clock: 0] 	My pid: 226203[0m
+[34m[id: 3] [clock: 0] 	Going into fight for 8 seconds![0m
+[35m[id: 4] [clock: 0] 	My pid: 226204[0m
+[35m[id: 4] [clock: 0] 	Going into fight for 6 seconds![0m
+[36m[id: 5] [clock: 0] 	My pid: 226205[0m
+[36m[id: 5] [clock: 0] 	Going into fight for 8 seconds![0m
+[32m[id: 1] [clock: 0] 	My pid: 226201[0m
+[32m[id: 1] [clock: 0] 	Going into fight for 7 seconds![0m
+[33m[id: 2] [clock: 0] 	My pid: 226202[0m
+[33m[id: 2] [clock: 0] 	Going into fight for 9 seconds![0m
+[31m[id: 0] [clock: 0] 	My pid: 226200[0m
+[31m[id: 0] [clock: 0] 	Going into fight for 3 seconds![0m
+[31m[id: 0] [clock: 0] 	Fight done. Now I want to get a dock![0m
+[31m[id: 0] [clock: 8] 	Entering the dock for 1 seconds![0m
+[31m[id: 0] [clock: 8] 	Going into fight for 4 seconds![0m
+[35m[id: 4] [clock: 2] 	Fight done. Now I want to get a dock![0m
+[35m[id: 4] [clock: 15] 	Entering the dock for 4 seconds![0m
+[32m[id: 1] [clock: 4] 	Fight done. Now I want to get a dock![0m
+[34m[id: 3] [clock: 6] 	Fight done. Now I want to get a dock![0m
+[36m[id: 5] [clock: 6] 	Fight done. Now I want to get a dock![0m
+[31m[id: 0] [clock: 12] 	Fight done. Now I want to get a dock![0m
+[33m[id: 2] [clock: 14] 	Fight done. Now I want to get a dock![0m
+[35m[id: 4] [clock: 15] 	Going into fight for 2 seconds![0m
+[35m[id: 4] [clock: 20] 	Fight done. Now I want to get a dock![0m
+[35m[id: 4] [clock: 36] 	Entering the dock for 6 seconds![0m

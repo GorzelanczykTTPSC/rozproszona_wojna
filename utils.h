@@ -7,9 +7,8 @@ typedef enum {InDock, Fighting, RequestingDock, ReadyToComeIn } state_t;
 
 #define FIELDNO 2
 typedef struct {
-    int ts;         /* timestamp (zegar lamporta */
+    int ts;         /* timestamp (zegar lamporta) */
     int src;        /* od kogo pochodzi wiadomość (rank) */
-    //int message;    /* typ wiadomości: 0 - REQUEST, 1 - OK */
 } packet_t;
 
 /* Typy wiadomości */
@@ -17,8 +16,9 @@ typedef struct {
 #define REQUEST 2
 #define INRUN 3
 #define OK 4
-#define GIVEMESTATE 5
-#define STATE 6
+
+// set to true if you want to see more output
+#define SHIP_DEBUG false
 
 #define DOCKS 1
 
