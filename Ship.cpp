@@ -39,10 +39,13 @@ void Ship::send(int destination, int tag)
 {
     packet_t* pkt = (packet_t*)malloc(sizeof(packet_t));
     pkt->src = rank;
-    pkt->ts = lamport_clock+1;
-    if (tag == REQUEST) {
-        last_sent_request_msg_timestamp=lamport_clock;
-    }
+    //if (tag != REQUEST) {
+    //}
+    lamport_clock++;
+    pkt->ts = lamport_clock;
+    // if (tag == REQUEST) {
+        //last_sent_request_msg_timestamp=lamport_clock;
+    // }
     //print("Sending message "+std::to_string(tag)+" to #"+std::to_string(destination));
     MPI_Send( pkt, 1, MPI_PAKIET_T, destination, tag, MPI_COMM_WORLD);
     free(pkt);
@@ -51,15 +54,17 @@ void Ship::send(int destination, int tag)
 void Ship::addReceivedOk() {
     received_oks += 1;
     if (debug()) print("Received oks: "+std::to_string(received_oks)+" All ships: "+std::to_string(all_ships_num));
-    if (received_oks>=(all_ships_num-DOCKS==1 ? all_ships_num-DOCKS : all_ships_num-DOCKS)) {
+    if (received_oks>=(all_ships_num-DOCKS)) {
         if (debug()) print("I got " + std::to_string(received_oks) + " oks. I'm coming in.");
-        //stateMut->unlock();
+        stateMut->unlock();
         canEnterDock->notify_all();
     }
+    stateMut->unlock();
     return;
 }
 
 void Ship::requestDockFromAll() {
+    last_sent_request_msg_timestamp=lamport_clock+1;
     for (int i=0; i<all_ships_num; i++) {
         if (i!=rank){
             send(i, REQUEST);
@@ -110,10 +115,10 @@ void Ship::remember(int shipID) {
 }
 
 void Ship::sendWaitingOKs() {
-    //for (int shipid : to_send_back_OK) {
-    //    send(shipid, OK);
-    //}
-    if (to_send_back_OK.size()>0) send(to_send_back_OK.front(), OK);
+    for (int shipid : to_send_back_OK) {
+        send(shipid, OK);
+    }
+    //if (to_send_back_OK.size()>0) send(to_send_back_OK.front(), OK);
     to_send_back_OK.clear();
     received_oks = 0;
 }

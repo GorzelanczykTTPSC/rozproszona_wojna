@@ -22,10 +22,10 @@ void communicationThread(Ship& ship) {
                     if (ship.debug()) ship.print("Ship #"+std::to_string(pakiet.src)+" wants to get a dock!");
                     
                     state_t stat = ship.getState();
-                    if ( (stat == Fighting) || ((stat == RequestingDock) && (ship.getLastRequestTimestamp()<pakiet.ts))) {
+                    if ( (stat == Fighting) || ((stat == RequestingDock) && (ship.getLastRequestTimestamp()>pakiet.ts))) {
                         if (ship.debug()) ship.print("OK, I agree");
                         ship.send(pakiet.src, OK);
-                    } else if ( (stat == InDock) || ((stat == RequestingDock) && (ship.getLastRequestTimestamp() > pakiet.ts))) {
+                    } else if ( (stat == InDock) || ((stat == RequestingDock) && (ship.getLastRequestTimestamp() < pakiet.ts))) {
                         if (ship.debug()) ship.print("Nah, I can't let him in");
                         ship.remember(pakiet.src);
                     }
@@ -33,11 +33,10 @@ void communicationThread(Ship& ship) {
                 }
 	        break;
 	        case OK: 
-                //ship.print("I received OK from "+std::to_string(pakiet.src));
+                ship.print("I received OK from "+std::to_string(pakiet.src)+" with lamport clock "+std::to_string(pakiet.ts)+". My last request clock: "+std::to_string(ship.getLastRequestTimestamp()));
                 if (ship.getState()==RequestingDock) {
                     //ship.print(" and I am requesting a dock pkt_ts: "+std::to_string(pakiet.ts)+" last_req_ts: "+std::to_string(ship.getLastRequestTimestamp()));
                     if (pakiet.ts>ship.getLastRequestTimestamp()) {
-                        ship.stateMut->unlock();
                         ship.addReceivedOk();
                     }
 

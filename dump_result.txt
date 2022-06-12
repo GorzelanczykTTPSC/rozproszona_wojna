@@ -1,0 +1,367 @@
+[id: 0] [clock: 0] 	Going into fight for 8 seconds!
+[id: 1] [clock: 0] 	Going into fight for 10 seconds!
+[id: 2] [clock: 0] 	Going into fight for 2 seconds!
+[id: 2] [clock: 0] 	Fight done. Now I want to get a dock!
+[id: 3] [clock: 0] 	Going into fight for 7 seconds!
+[id: 4] [clock: 0] 	Going into fight for 8 seconds!
+[id: 5] [clock: 0] 	Going into fight for 4 seconds!
+[id: 0] [clock: 2] 	Ship #2 wants to get a dock!
+[id: 0] [clock: 2] 	OK, I agree
+[id: 1] [clock: 2] 	Ship #2 wants to get a dock!
+[id: 1] [clock: 2] 	OK, I agree
+[id: 3] [clock: 2] 	Ship #2 wants to get a dock!
+[id: 3] [clock: 2] 	OK, I agree
+[id: 4] [clock: 2] 	Ship #2 wants to get a dock!
+[id: 4] [clock: 2] 	OK, I agree
+[id: 5] [clock: 2] 	Ship #2 wants to get a dock!
+[id: 5] [clock: 2] 	OK, I agree
+[id: 5] [clock: 3] 	Fight done. Now I want to get a dock!
+[id: 2] [clock: 4] 	I received OK from 4 with lamport clock 3. My last request clock: 1
+[id: 2] [clock: 4] 	Received oks: 1 All ships: 6
+[id: 0] [clock: 5] 	Ship #5 wants to get a dock!
+[id: 0] [clock: 5] 	OK, I agree
+[id: 1] [clock: 5] 	Ship #5 wants to get a dock!
+[id: 1] [clock: 5] 	OK, I agree
+[id: 2] [clock: 5] 	I received OK from 1 with lamport clock 3. My last request clock: 1
+[id: 2] [clock: 5] 	Received oks: 2 All ships: 6
+[id: 3] [clock: 5] 	Ship #5 wants to get a dock!
+[id: 3] [clock: 5] 	OK, I agree
+[id: 4] [clock: 5] 	Ship #5 wants to get a dock!
+[id: 4] [clock: 5] 	OK, I agree
+[id: 2] [clock: 6] 	I received OK from 3 with lamport clock 3. My last request clock: 1
+[id: 2] [clock: 6] 	Received oks: 3 All ships: 6
+[id: 3] [clock: 6] 	Fight done. Now I want to get a dock!
+[id: 2] [clock: 7] 	I received OK from 5 with lamport clock 3. My last request clock: 1
+[id: 2] [clock: 7] 	Received oks: 4 All ships: 6
+[id: 5] [clock: 7] 	I received OK from 1 with lamport clock 6. My last request clock: 4
+[id: 5] [clock: 7] 	Received oks: 1 All ships: 6
+[id: 0] [clock: 8] 	Ship #3 wants to get a dock!
+[id: 0] [clock: 8] 	OK, I agree
+[id: 1] [clock: 8] 	Ship #3 wants to get a dock!
+[id: 1] [clock: 8] 	OK, I agree
+[id: 2] [clock: 8] 	I received OK from 0 with lamport clock 3. My last request clock: 1
+[id: 2] [clock: 8] 	Received oks: 5 All ships: 6
+[id: 2] [clock: 8] 	I got 5 oks. I'm coming in.
+[id: 2] [clock: 8] 	Entering the dock for 3 seconds!
+[id: 2] [clock: 8] 	I'm in the dock.
+[id: 2] [clock: 8] 	Leaving the dock.
+[id: 2] [clock: 8] 	Going into fight for 4 seconds!
+[id: 4] [clock: 8] 	Ship #3 wants to get a dock!
+[id: 4] [clock: 8] 	OK, I agree
+[id: 5] [clock: 8] 	I received OK from 3 with lamport clock 6. My last request clock: 4
+[id: 5] [clock: 8] 	Received oks: 2 All ships: 6
+[id: 2] [clock: 9] 	Ship #5 wants to get a dock!
+[id: 2] [clock: 9] 	OK, I agree
+[id: 4] [clock: 9] 	Fight done. Now I want to get a dock!
+[id: 5] [clock: 9] 	I received OK from 4 with lamport clock 6. My last request clock: 4
+[id: 5] [clock: 9] 	Received oks: 3 All ships: 6
+[id: 5] [clock: 10] 	I received OK from 0 with lamport clock 6. My last request clock: 4
+[id: 5] [clock: 10] 	Received oks: 4 All ships: 6
+[id: 0] [clock: 11] 	Ship #4 wants to get a dock!
+[id: 0] [clock: 11] 	OK, I agree
+[id: 1] [clock: 11] 	Ship #4 wants to get a dock!
+[id: 1] [clock: 11] 	OK, I agree
+[id: 2] [clock: 11] 	Ship #3 wants to get a dock!
+[id: 2] [clock: 11] 	OK, I agree
+[id: 5] [clock: 11] 	I received OK from 2 with lamport clock 10. My last request clock: 4
+[id: 5] [clock: 11] 	Received oks: 5 All ships: 6
+[id: 5] [clock: 11] 	I got 5 oks. I'm coming in.
+[id: 5] [clock: 11] 	Entering the dock for 10 seconds!
+[id: 5] [clock: 11] 	I'm in the dock.
+[id: 5] [clock: 11] 	Leaving the dock.
+[id: 5] [clock: 11] 	Going into fight for 1 seconds!
+[id: 0] [clock: 12] 	Fight done. Now I want to get a dock!
+[id: 5] [clock: 12] 	Ship #3 wants to get a dock!
+[id: 5] [clock: 12] 	OK, I agree
+[id: 2] [clock: 13] 	Ship #4 wants to get a dock!
+[id: 2] [clock: 13] 	OK, I agree
+[id: 3] [clock: 13] 	I received OK from 2 with lamport clock 12. My last request clock: 7
+[id: 3] [clock: 13] 	Received oks: 1 All ships: 6
+[id: 1] [clock: 14] 	Ship #0 wants to get a dock!
+[id: 1] [clock: 14] 	OK, I agree
+[id: 3] [clock: 14] 	I received OK from 1 with lamport clock 9. My last request clock: 7
+[id: 3] [clock: 14] 	Received oks: 2 All ships: 6
+[id: 5] [clock: 14] 	Ship #4 wants to get a dock!
+[id: 5] [clock: 14] 	OK, I agree
+[id: 2] [clock: 15] 	Ship #0 wants to get a dock!
+[id: 2] [clock: 15] 	OK, I agree
+[id: 3] [clock: 15] 	I received OK from 4 with lamport clock 9. My last request clock: 7
+[id: 3] [clock: 15] 	Received oks: 3 All ships: 6
+[id: 4] [clock: 15] 	I received OK from 2 with lamport clock 14. My last request clock: 10
+[id: 4] [clock: 15] 	Received oks: 1 All ships: 6
+[id: 2] [clock: 16] 	Fight done. Now I want to get a dock!
+[id: 3] [clock: 16] 	I received OK from 0 with lamport clock 9. My last request clock: 7
+[id: 3] [clock: 16] 	Received oks: 4 All ships: 6
+[id: 4] [clock: 16] 	I received OK from 1 with lamport clock 12. My last request clock: 10
+[id: 4] [clock: 16] 	Received oks: 2 All ships: 6
+[id: 0] [clock: 17] 	I received OK from 2 with lamport clock 16. My last request clock: 13
+[id: 0] [clock: 17] 	Received oks: 1 All ships: 6
+[id: 3] [clock: 17] 	Ship #4 wants to get a dock!
+[id: 3] [clock: 17] 	Nah, I can't let him in
+[id: 4] [clock: 17] 	I received OK from 0 with lamport clock 12. My last request clock: 10
+[id: 4] [clock: 17] 	Received oks: 3 All ships: 6
+[id: 0] [clock: 18] 	I received OK from 1 with lamport clock 15. My last request clock: 13
+[id: 0] [clock: 18] 	Received oks: 2 All ships: 6
+[id: 1] [clock: 18] 	Ship #2 wants to get a dock!
+[id: 1] [clock: 18] 	OK, I agree
+[id: 3] [clock: 18] 	Ship #0 wants to get a dock!
+[id: 3] [clock: 18] 	Nah, I can't let him in
+[id: 4] [clock: 18] 	Ship #0 wants to get a dock!
+[id: 4] [clock: 18] 	Nah, I can't let him in
+[id: 0] [clock: 19] 	Ship #2 wants to get a dock!
+[id: 0] [clock: 19] 	Nah, I can't let him in
+[id: 1] [clock: 19] 	Fight done. Now I want to get a dock!
+[id: 3] [clock: 19] 	Ship #2 wants to get a dock!
+[id: 3] [clock: 19] 	Nah, I can't let him in
+[id: 4] [clock: 19] 	Ship #2 wants to get a dock!
+[id: 4] [clock: 19] 	Nah, I can't let him in
+[id: 2] [clock: 20] 	I received OK from 1 with lamport clock 19. My last request clock: 17
+[id: 2] [clock: 20] 	Received oks: 1 All ships: 6
+[id: 0] [clock: 21] 	Ship #1 wants to get a dock!
+[id: 0] [clock: 21] 	Nah, I can't let him in
+[id: 2] [clock: 21] 	Ship #1 wants to get a dock!
+[id: 2] [clock: 21] 	Nah, I can't let him in
+[id: 3] [clock: 21] 	Ship #1 wants to get a dock!
+[id: 3] [clock: 21] 	Nah, I can't let him in
+[id: 4] [clock: 21] 	Ship #1 wants to get a dock!
+[id: 4] [clock: 21] 	Nah, I can't let him in
+[id: 5] [clock: 21] 	Ship #1 wants to get a dock!
+[id: 5] [clock: 21] 	OK, I agree
+[id: 3] [clock: 22] 	I received OK from 5 with lamport clock 13. My last request clock: 7
+[id: 3] [clock: 22] 	Received oks: 5 All ships: 6
+[id: 3] [clock: 22] 	I got 5 oks. I'm coming in.
+[id: 3] [clock: 22] 	Entering the dock for 8 seconds!
+[id: 3] [clock: 22] 	I'm in the dock.
+[id: 3] [clock: 22] 	Leaving the dock.
+[id: 4] [clock: 22] 	I received OK from 5 with lamport clock 15. My last request clock: 10
+[id: 4] [clock: 22] 	Received oks: 4 All ships: 6
+[id: 1] [clock: 23] 	I received OK from 5 with lamport clock 22. My last request clock: 20
+[id: 1] [clock: 23] 	Received oks: 1 All ships: 6
+[id: 5] [clock: 23] 	Ship #2 wants to get a dock!
+[id: 5] [clock: 23] 	OK, I agree
+[id: 2] [clock: 25] 	I received OK from 5 with lamport clock 24. My last request clock: 17
+[id: 2] [clock: 25] 	Received oks: 2 All ships: 6
+[id: 5] [clock: 25] 	Ship #0 wants to get a dock!
+[id: 5] [clock: 25] 	OK, I agree
+[id: 3] [clock: 26] 	Going into fight for 9 seconds!
+[id: 5] [clock: 26] 	Fight done. Now I want to get a dock!
+[id: 0] [clock: 27] 	I received OK from 5 with lamport clock 26. My last request clock: 13
+[id: 0] [clock: 27] 	Received oks: 3 All ships: 6
+[id: 0] [clock: 28] 	Ship #5 wants to get a dock!
+[id: 0] [clock: 28] 	Nah, I can't let him in
+[id: 1] [clock: 28] 	Ship #5 wants to get a dock!
+[id: 1] [clock: 28] 	Nah, I can't let him in
+[id: 2] [clock: 28] 	Ship #5 wants to get a dock!
+[id: 2] [clock: 28] 	Nah, I can't let him in
+[id: 3] [clock: 28] 	Ship #5 wants to get a dock!
+[id: 3] [clock: 28] 	OK, I agree
+[id: 4] [clock: 28] 	Ship #5 wants to get a dock!
+[id: 4] [clock: 28] 	Nah, I can't let him in
+[id: 0] [clock: 29] 	I received OK from 3 with lamport clock 24. My last request clock: 13
+[id: 0] [clock: 29] 	Received oks: 4 All ships: 6
+[id: 1] [clock: 29] 	I received OK from 3 with lamport clock 26. My last request clock: 20
+[id: 1] [clock: 29] 	Received oks: 2 All ships: 6
+[id: 2] [clock: 29] 	I received OK from 3 with lamport clock 25. My last request clock: 17
+[id: 2] [clock: 29] 	Received oks: 3 All ships: 6
+[id: 3] [clock: 29] 	Fight done. Now I want to get a dock!
+[id: 4] [clock: 29] 	I received OK from 3 with lamport clock 23. My last request clock: 10
+[id: 4] [clock: 29] 	Received oks: 5 All ships: 6
+[id: 4] [clock: 29] 	I got 5 oks. I'm coming in.
+[id: 4] [clock: 29] 	Entering the dock for 4 seconds!
+[id: 4] [clock: 29] 	I'm in the dock.
+[id: 4] [clock: 29] 	Leaving the dock.
+[id: 5] [clock: 30] 	I received OK from 3 with lamport clock 29. My last request clock: 27
+[id: 5] [clock: 30] 	Received oks: 1 All ships: 6
+[id: 0] [clock: 31] 	I received OK from 4 with lamport clock 30. My last request clock: 13
+[id: 0] [clock: 31] 	Received oks: 5 All ships: 6
+[id: 0] [clock: 31] 	I got 5 oks. I'm coming in.
+[id: 0] [clock: 31] 	Entering the dock for 5 seconds!
+[id: 0] [clock: 31] 	I'm in the dock.
+[id: 0] [clock: 31] 	Leaving the dock.
+[id: 2] [clock: 32] 	I received OK from 4 with lamport clock 31. My last request clock: 17
+[id: 2] [clock: 32] 	Received oks: 4 All ships: 6
+[id: 1] [clock: 33] 	I received OK from 4 with lamport clock 32. My last request clock: 20
+[id: 1] [clock: 33] 	Received oks: 3 All ships: 6
+[id: 2] [clock: 33] 	Ship #3 wants to get a dock!
+[id: 2] [clock: 33] 	Nah, I can't let him in
+[id: 4] [clock: 33] 	Going into fight for 10 seconds!
+[id: 0] [clock: 34] 	Going into fight for 2 seconds!
+[id: 1] [clock: 34] 	Ship #3 wants to get a dock!
+[id: 1] [clock: 34] 	Nah, I can't let him in
+[id: 2] [clock: 34] 	I received OK from 0 with lamport clock 32. My last request clock: 17
+[id: 2] [clock: 34] 	Received oks: 5 All ships: 6
+[id: 2] [clock: 34] 	I got 5 oks. I'm coming in.
+[id: 2] [clock: 34] 	Entering the dock for 9 seconds!
+[id: 2] [clock: 34] 	I'm in the dock.
+[id: 2] [clock: 34] 	Leaving the dock.
+[id: 4] [clock: 34] 	Ship #3 wants to get a dock!
+[id: 4] [clock: 34] 	OK, I agree
+[id: 5] [clock: 34] 	I received OK from 4 with lamport clock 33. My last request clock: 27
+[id: 5] [clock: 34] 	Received oks: 2 All ships: 6
+[id: 0] [clock: 35] 	Ship #3 wants to get a dock!
+[id: 0] [clock: 35] 	OK, I agree
+[id: 1] [clock: 35] 	I received OK from 0 with lamport clock 33. My last request clock: 20
+[id: 1] [clock: 35] 	Received oks: 4 All ships: 6
+[id: 5] [clock: 35] 	Ship #3 wants to get a dock!
+[id: 5] [clock: 35] 	Nah, I can't let him in
+[id: 0] [clock: 36] 	Fight done. Now I want to get a dock!
+[id: 3] [clock: 36] 	I received OK from 4 with lamport clock 35. My last request clock: 30
+[id: 3] [clock: 36] 	Received oks: 1 All ships: 6
+[id: 5] [clock: 36] 	I received OK from 0 with lamport clock 34. My last request clock: 27
+[id: 5] [clock: 36] 	Received oks: 3 All ships: 6
+[id: 2] [clock: 37] 	Going into fight for 5 seconds!
+[id: 3] [clock: 37] 	I received OK from 0 with lamport clock 36. My last request clock: 30
+[id: 3] [clock: 37] 	Received oks: 2 All ships: 6
+[id: 1] [clock: 38] 	Ship #0 wants to get a dock!
+[id: 1] [clock: 38] 	Nah, I can't let him in
+[id: 2] [clock: 38] 	Ship #0 wants to get a dock!
+[id: 2] [clock: 38] 	OK, I agree
+[id: 3] [clock: 38] 	Ship #0 wants to get a dock!
+[id: 3] [clock: 38] 	Nah, I can't let him in
+[id: 4] [clock: 38] 	Ship #0 wants to get a dock!
+[id: 4] [clock: 38] 	OK, I agree
+[id: 5] [clock: 38] 	Ship #0 wants to get a dock!
+[id: 5] [clock: 38] 	Nah, I can't let him in
+[id: 4] [clock: 39] 	Fight done. Now I want to get a dock!
+[id: 0] [clock: 40] 	I received OK from 4 with lamport clock 39. My last request clock: 37
+[id: 0] [clock: 40] 	Received oks: 1 All ships: 6
+[id: 0] [clock: 41] 	Ship #4 wants to get a dock!
+[id: 0] [clock: 41] 	Nah, I can't let him in
+[id: 1] [clock: 41] 	Ship #4 wants to get a dock!
+[id: 1] [clock: 41] 	Nah, I can't let him in
+[id: 2] [clock: 41] 	Ship #4 wants to get a dock!
+[id: 2] [clock: 41] 	OK, I agree
+[id: 3] [clock: 41] 	Ship #4 wants to get a dock!
+[id: 3] [clock: 41] 	Nah, I can't let him in
+[id: 5] [clock: 41] 	Ship #4 wants to get a dock!
+[id: 5] [clock: 41] 	Nah, I can't let him in
+[id: 0] [clock: 42] 	I received OK from 2 with lamport clock 39. My last request clock: 37
+[id: 0] [clock: 42] 	Received oks: 2 All ships: 6
+[id: 1] [clock: 42] 	I received OK from 2 with lamport clock 35. My last request clock: 20
+[id: 1] [clock: 42] 	Received oks: 5 All ships: 6
+[id: 1] [clock: 42] 	I got 5 oks. I'm coming in.
+[id: 1] [clock: 42] 	Entering the dock for 4 seconds!
+[id: 1] [clock: 42] 	I'm in the dock.
+[id: 1] [clock: 42] 	Leaving the dock.
+[id: 2] [clock: 42] 	Fight done. Now I want to get a dock!
+[id: 3] [clock: 42] 	I received OK from 2 with lamport clock 37. My last request clock: 30
+[id: 3] [clock: 42] 	Received oks: 3 All ships: 6
+[id: 5] [clock: 42] 	I received OK from 2 with lamport clock 36. My last request clock: 27
+[id: 5] [clock: 42] 	Received oks: 4 All ships: 6
+[id: 4] [clock: 43] 	I received OK from 2 with lamport clock 42. My last request clock: 40
+[id: 4] [clock: 43] 	Received oks: 1 All ships: 6
+[id: 5] [clock: 44] 	I received OK from 1 with lamport clock 43. My last request clock: 27
+[id: 5] [clock: 44] 	Received oks: 5 All ships: 6
+[id: 5] [clock: 44] 	I got 5 oks. I'm coming in.
+[id: 5] [clock: 44] 	Entering the dock for 8 seconds!
+[id: 5] [clock: 44] 	I'm in the dock.
+[id: 5] [clock: 44] 	Leaving the dock.
+[id: 3] [clock: 45] 	I received OK from 1 with lamport clock 44. My last request clock: 30
+[id: 3] [clock: 45] 	Received oks: 4 All ships: 6
+[id: 0] [clock: 46] 	I received OK from 1 with lamport clock 45. My last request clock: 37
+[id: 0] [clock: 46] 	Received oks: 3 All ships: 6
+[id: 1] [clock: 46] 	Going into fight for 4 seconds!
+[id: 3] [clock: 46] 	Ship #2 wants to get a dock!
+[id: 3] [clock: 46] 	Nah, I can't let him in
+[id: 0] [clock: 47] 	Ship #2 wants to get a dock!
+[id: 0] [clock: 47] 	Nah, I can't let him in
+[id: 1] [clock: 47] 	Ship #2 wants to get a dock!
+[id: 1] [clock: 47] 	OK, I agree
+[id: 4] [clock: 47] 	I received OK from 1 with lamport clock 46. My last request clock: 40
+[id: 4] [clock: 47] 	Received oks: 2 All ships: 6
+[id: 5] [clock: 47] 	Going into fight for 2 seconds!
+[id: 1] [clock: 48] 	Fight done. Now I want to get a dock!
+[id: 4] [clock: 48] 	Ship #2 wants to get a dock!
+[id: 4] [clock: 48] 	Nah, I can't let him in
+[id: 5] [clock: 48] 	Ship #2 wants to get a dock!
+[id: 5] [clock: 48] 	OK, I agree
+[id: 2] [clock: 49] 	I received OK from 1 with lamport clock 48. My last request clock: 43
+[id: 2] [clock: 49] 	Received oks: 1 All ships: 6
+[id: 0] [clock: 50] 	Ship #1 wants to get a dock!
+[id: 0] [clock: 50] 	Nah, I can't let him in
+[id: 2] [clock: 50] 	Ship #1 wants to get a dock!
+[id: 2] [clock: 50] 	Nah, I can't let him in
+[id: 3] [clock: 50] 	Ship #1 wants to get a dock!
+[id: 3] [clock: 50] 	Nah, I can't let him in
+[id: 4] [clock: 50] 	Ship #1 wants to get a dock!
+[id: 4] [clock: 50] 	Nah, I can't let him in
+[id: 5] [clock: 50] 	Ship #1 wants to get a dock!
+[id: 5] [clock: 50] 	OK, I agree
+[id: 0] [clock: 51] 	I received OK from 5 with lamport clock 46. My last request clock: 37
+[id: 0] [clock: 51] 	Received oks: 4 All ships: 6
+[id: 2] [clock: 51] 	I received OK from 5 with lamport clock 49. My last request clock: 43
+[id: 2] [clock: 51] 	Received oks: 2 All ships: 6
+[id: 3] [clock: 51] 	I received OK from 5 with lamport clock 45. My last request clock: 30
+[id: 3] [clock: 51] 	Received oks: 5 All ships: 6
+[id: 3] [clock: 51] 	I got 5 oks. I'm coming in.
+[id: 3] [clock: 51] 	Entering the dock for 10 seconds!
+[id: 3] [clock: 51] 	I'm in the dock.
+[id: 3] [clock: 51] 	Leaving the dock.
+[id: 4] [clock: 51] 	I received OK from 5 with lamport clock 47. My last request clock: 40
+[id: 4] [clock: 51] 	Received oks: 3 All ships: 6
+[id: 5] [clock: 51] 	Fight done. Now I want to get a dock!
+[id: 1] [clock: 52] 	I received OK from 5 with lamport clock 51. My last request clock: 49
+[id: 1] [clock: 52] 	Received oks: 1 All ships: 6
+[id: 0] [clock: 53] 	Ship #5 wants to get a dock!
+[id: 0] [clock: 53] 	Nah, I can't let him in
+[id: 1] [clock: 53] 	Ship #5 wants to get a dock!
+[id: 1] [clock: 53] 	Nah, I can't let him in
+[id: 2] [clock: 53] 	Ship #5 wants to get a dock!
+[id: 2] [clock: 53] 	Nah, I can't let him in
+[id: 4] [clock: 53] 	Ship #5 wants to get a dock!
+[id: 4] [clock: 53] 	Nah, I can't let him in
+[id: 0] [clock: 54] 	I received OK from 3 with lamport clock 52. My last request clock: 37
+[id: 0] [clock: 54] 	Received oks: 5 All ships: 6
+[id: 0] [clock: 54] 	I got 5 oks. I'm coming in.
+[id: 0] [clock: 54] 	Entering the dock for 6 seconds!
+[id: 0] [clock: 54] 	I'm in the dock.
+[id: 0] [clock: 54] 	Leaving the dock.
+[id: 4] [clock: 54] 	I received OK from 3 with lamport clock 53. My last request clock: 40
+[id: 4] [clock: 54] 	Received oks: 4 All ships: 6
+[id: 2] [clock: 55] 	I received OK from 3 with lamport clock 54. My last request clock: 43
+[id: 2] [clock: 55] 	Received oks: 3 All ships: 6
+[id: 3] [clock: 55] 	Going into fight for 9 seconds!
+[id: 1] [clock: 56] 	I received OK from 3 with lamport clock 55. My last request clock: 49
+[id: 1] [clock: 56] 	Received oks: 2 All ships: 6
+[id: 3] [clock: 56] 	Ship #5 wants to get a dock!
+[id: 3] [clock: 56] 	OK, I agree
+[id: 4] [clock: 56] 	I received OK from 0 with lamport clock 55. My last request clock: 40
+[id: 4] [clock: 56] 	Received oks: 5 All ships: 6
+[id: 4] [clock: 56] 	I got 5 oks. I'm coming in.
+[id: 4] [clock: 56] 	Entering the dock for 2 seconds!
+[id: 4] [clock: 56] 	I'm in the dock.
+[id: 4] [clock: 56] 	Leaving the dock.
+[id: 2] [clock: 57] 	I received OK from 0 with lamport clock 56. My last request clock: 43
+[id: 2] [clock: 57] 	Received oks: 4 All ships: 6
+[id: 0] [clock: 58] 	Going into fight for 1 seconds!
+[id: 0] [clock: 58] 	Fight done. Now I want to get a dock!
+[id: 1] [clock: 58] 	I received OK from 0 with lamport clock 57. My last request clock: 49
+[id: 1] [clock: 58] 	Received oks: 3 All ships: 6
+[id: 5] [clock: 58] 	I received OK from 3 with lamport clock 57. My last request clock: 52
+[id: 5] [clock: 58] 	Received oks: 1 All ships: 6
+[id: 4] [clock: 59] 	Going into fight for 4 seconds!
+[id: 5] [clock: 59] 	I received OK from 0 with lamport clock 58. My last request clock: 52
+[id: 5] [clock: 59] 	Received oks: 2 All ships: 6
+[id: 1] [clock: 60] 	Ship #0 wants to get a dock!
+[id: 1] [clock: 60] 	Nah, I can't let him in
+[id: 2] [clock: 60] 	Ship #0 wants to get a dock!
+[id: 2] [clock: 60] 	Nah, I can't let him in
+[id: 3] [clock: 60] 	Ship #0 wants to get a dock!
+[id: 3] [clock: 60] 	OK, I agree
+[id: 4] [clock: 60] 	Ship #0 wants to get a dock!
+[id: 4] [clock: 60] 	OK, I agree
+[id: 5] [clock: 60] 	Ship #0 wants to get a dock!
+[id: 5] [clock: 60] 	Nah, I can't let him in
+[id: 1] [clock: 61] 	I received OK from 4 with lamport clock 58. My last request clock: 49
+[id: 1] [clock: 61] 	Received oks: 4 All ships: 6
+[id: 2] [clock: 61] 	I received OK from 4 with lamport clock 57. My last request clock: 43
+[id: 2] [clock: 61] 	Received oks: 5 All ships: 6
+[id: 2] [clock: 61] 	I got 5 oks. I'm coming in.
+[id: 2] [clock: 61] 	Entering the dock for 6 seconds!
+[id: 2] [clock: 61] 	I'm in the dock.
+[id: 5] [clock: 61] 	I received OK from 4 with lamport clock 59. My last request clock: 52
+[id: 5] [clock: 61] 	Received oks: 3 All ships: 6
+[id: 0] [clock: 62] 	I received OK from 3 with lamport clock 61. My last request clock: 59
+[id: 0] [clock: 62] 	Received oks: 1 All ships: 6
+[id: 0] [clock: 63] 	I received OK from 4 with lamport clock 61. My last request clock: 59
+[id: 0] [clock: 63] 	Received oks: 2 All ships: 6

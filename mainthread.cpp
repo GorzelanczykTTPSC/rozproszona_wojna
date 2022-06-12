@@ -5,7 +5,7 @@ int STATE_CHANGE_PROB = 50;
 void mainLoop(Ship& ship)
 {
     srandom(time(NULL)+getpid()+ship.getRank());
-    ship.print("My pid: "+std::to_string(getpid()));
+    //ship.print("My pid: "+std::to_string(getpid()));
     while (ship.isActive()) { //(ship.getState() != InFinish) {
         int perc = random()%100; 
 

@@ -18,9 +18,9 @@ typedef struct {
 #define OK 4
 
 // set to true if you want to see more output
-#define SHIP_DEBUG false
+#define SHIP_DEBUG true
 
-#define DOCKS 1
+extern int DOCKS;
 
 extern MPI_Datatype MPI_PAKIET_T;
 

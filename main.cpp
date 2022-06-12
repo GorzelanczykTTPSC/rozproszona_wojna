@@ -16,6 +16,8 @@ volatile char end = false;
 
 MPI_Datatype MPI_PAKIET_T;
 
+int DOCKS;
+
 void check_thread_support(int provided)
 {
     if (SHIP_DEBUG) printf("THREAD SUPPORT: chcemy %d. Co otrzymamy?\n", provided);
@@ -94,6 +96,7 @@ int main(int argc, char **argv)
 {
     signal(SIGKILL, finalize);
     signal(SIGABRT, finalize);
+    DOCKS = atoi(argv[1]);
     /* Tworzenie wątków, inicjalizacja itp */
     init(&argc,&argv); // tworzy wątek komunikacyjny w "watek_komunikacyjny.c"
 
